@@ -18,21 +18,34 @@ interface TaxCalculationOptions {
 }
 
 
-
+const tax = 0.12;
 // Con desestructuración
 function taxCalculation({ tax, products }: TaxCalculationOptions): number[] {
   let total = 0;
   products.forEach(({price}) => {
     total += price; //product es un elemento del array y es un objeto
   });
-  return [total, total * tax];
+  const taxResult = total * tax;
+  return [total, taxResult];
 }
 
 
 const products: Product[] = [phone, tablet];//esto es un array de objetos porque tablet y phone son objetos
 
-const tax = 0.12;
+const [total,taxResult] = taxCalculation(
+  {
+    tax:tax,
+    products:products
+  }
+)
 
+console.log("total:", total);
+console.log("tax:", taxResult);
+
+export {};
+
+
+/*
 const result = taxCalculation({
   tax: tax,
   products: products,
@@ -40,8 +53,8 @@ const result = taxCalculation({
 
 console.log("total:", result[0]);
 console.log("tax:", result[1]);
+*/
 
-export {};
 
 
 //sin desestructuración
