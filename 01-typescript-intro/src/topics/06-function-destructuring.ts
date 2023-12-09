@@ -1,4 +1,4 @@
-interface Product {
+export interface Product {
   description: string;
   price: number;
 }
@@ -20,7 +20,7 @@ interface TaxCalculationOptions {
 
 const tax = 0.12;
 // Con desestructuración
-function taxCalculation({ tax, products }: TaxCalculationOptions): number[] {
+export function taxCalculation({ tax, products }: TaxCalculationOptions): number[] {
   let total = 0;
   products.forEach(({price}) => {
     total += price; //product es un elemento del array y es un objeto
@@ -42,7 +42,7 @@ const [total,taxResult] = taxCalculation(
 console.log("total:", total);
 console.log("tax:", taxResult);
 
-export {};
+
 
 
 /*
