@@ -1,0 +1,32 @@
+<div class="main-container min-h-screen  py-6 flex flex-col justify-center sm:py-12">
+    <div class="content-container relative py-3 sm:max-w-xl sm:mx-auto">
+        <div class="background-decorative absolute inset-0 bg-gradient-to-r from-cyan-400 to-light-blue-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl"></div>
+        <div class="info-box relative px-4 py-10 bg-blue-200 shadow-lg sm:rounded-3xl sm:p-20">
+            <h1 class="title text-2xl font-bold text-gray-900">Spiderman</h1>
+
+            <dl class="info-list mt-4 space-y-2">
+                <div class="info-item flex space-x-4">
+                    <dt class="info-term text-lg text-gray-700">Nombre:</dt>
+                    <dd class="info-description text-lg text-gray-900">{{name}}</dd>
+                </div>
+                <div class="info-item flex space-x-4">
+                    <dt class="info-term text-lg text-gray-700">Edad:</dt>
+                    <dd class="info-description text-lg text-gray-900">{{age}} </dd>
+                </div>
+                <div class="info-item flex space-x-4">
+                    <dt class="info-term text-lg text-gray-700">Método:</dt>
+                    <dd class="info-description text-lg text-gray-900">algún método</dd>
+                </div>
+                <div class="info-item flex space-x-4">
+                    <dt class="info-term text-lg text-gray-700">Capitalizado:</dt>
+                    <dd class="info-description text-lg text-gray-900">{{capitalizedName}}</dd>
+                </div>
+            </dl>
+
+            <div class="button-group mt-6 flex-col space-y-4 ">
+                <button class="primary-button px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-200">Cambiar nombre</button>
+                <button class="danger-button px-4 py-2 bg-red-500 text-white rounded hover:bg-red-200">Cambiar edad</button>
+            </div>
+        </div>
+    </div>
+</div>
